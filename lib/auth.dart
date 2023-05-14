@@ -47,14 +47,18 @@ class _AuthState extends State<Auth> {
               ),
             ),
           ),
-          ElevatedButton(
-            onPressed: (){}, 
-            child: Text("LOG IN"),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.teal[300], 
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17))
-            )
-            ),
+          SizedBox(
+            height: 40,
+            width:100,
+            child: ElevatedButton(
+              onPressed: (){}, 
+              child: Text("LOG IN"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal[300], 
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(19))
+              )
+              ),
+          ),
             Padding(
               padding: const EdgeInsets.only(top:8.0),
               child: Row(

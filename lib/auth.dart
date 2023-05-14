@@ -29,7 +29,9 @@ class _AuthState extends State<Auth> {
             padding: const EdgeInsets.all(16.0),
             child: TextField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
                 labelText: "email address",     
               ),
             ),
@@ -38,16 +40,30 @@ class _AuthState extends State<Auth> {
             padding: const EdgeInsets.all(16.0),
             child: TextField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
                 labelText: "password",     
               ),
             ),
           ),
           ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(Colors.teal),
+            onPressed: (){}, 
+            child: Text("LOG IN"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.teal[300], 
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17))
+            )
             ),
-            onPressed: (){}, child: Text("Log In"))
+            Padding(
+              padding: const EdgeInsets.only(top:8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Text("Don't have an account? "),
+                Text("Sign Up", style:TextStyle(fontWeight: FontWeight.w500))
+              ],),
+            )
         ],),
       )
     );

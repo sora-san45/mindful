@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mindful/splashscreen.dart';
 
-void main() async{
-  await Firebase.initialize
+void main(){
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {

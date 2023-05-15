@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:mindful/homepage.dart';
 
 class Auth extends StatefulWidget {
   const Auth({super.key});
@@ -13,16 +14,13 @@ class _AuthState extends State<Auth> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
+        body: Center(
+      child: Column(
+        children: [
           SizedBox(height: 300),
           Text(
             "Welcome",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w300
-            ),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
           ),
           SizedBox(height: 50),
           Padding(
@@ -32,7 +30,7 @@ class _AuthState extends State<Auth> {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
-                labelText: "email address",     
+                labelText: "email address",
               ),
             ),
           ),
@@ -43,33 +41,37 @@ class _AuthState extends State<Auth> {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
-                labelText: "password",     
+                labelText: "password",
               ),
             ),
           ),
           SizedBox(
             height: 40,
-            width:100,
+            width: 100,
             child: ElevatedButton(
-              onPressed: (){}, 
-              child: Text("LOG IN"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.teal[300], 
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(19))
-              )
-              ),
+                onPressed: () {
+                  Navigator.push(
+                    context, MaterialPageRoute(builder: (context) =>HomePage())
+                  );
+                },
+                child: Text("LOG IN"),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.teal[300],
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(19)))),
           ),
-            Padding(
-              padding: const EdgeInsets.only(top:8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
                 Text("Don't have an account? "),
-                Text("Sign Up", style:TextStyle(fontWeight: FontWeight.w500))
-              ],),
-            )
-        ],),
-      )
-    );
+                Text("Sign Up", style: TextStyle(fontWeight: FontWeight.w500))
+              ],
+            ),
+          )
+        ],
+      ),
+    ));
   }
 }

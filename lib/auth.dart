@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:mindful/homepage.dart';
+import 'package:mindful/signup.dart';
 
 class Auth extends StatefulWidget {
   const Auth({super.key});
@@ -50,9 +51,8 @@ class _AuthState extends State<Auth> {
             width: 100,
             child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(builder: (context) =>HomePage())
-                  );
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
                 },
                 child: Text("LOG IN"),
                 style: ElevatedButton.styleFrom(
@@ -66,7 +66,13 @@ class _AuthState extends State<Auth> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("Don't have an account? "),
-                Text("Sign Up", style: TextStyle(fontWeight: FontWeight.w500))
+                ElevatedButton(
+                  child: Text("Sign Up"),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SignUp()));
+                  },
+                )
               ],
             ),
           )

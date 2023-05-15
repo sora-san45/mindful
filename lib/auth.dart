@@ -66,12 +66,15 @@ class _AuthState extends State<Auth> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("Don't have an account? "),
-                ElevatedButton(
-                  child: Text("Sign Up"),
-                  onPressed: () {
+                InkWell(
+                  onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => SignUp()));
                   },
+                  child:Text("Sign Up",
+                  style:TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.teal))
                 )
               ],
             ),

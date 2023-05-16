@@ -13,11 +13,36 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Column(
-        children: [
-          SizedBox(height: 200),
-          Text("Sign Up"),
-        ],
+      body:Center(
+        child: Column(
+          children: [
+            SizedBox(height: 250),
+            Text("Sign Up",style: TextStyle(fontSize: 25),),
+            SizedBox(height: 40,),
+            Padding(
+              padding: const EdgeInsets.only(left:16.0,right:16.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: "email addres",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30)
+                  )
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left:16.0,right:16.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: "email addres",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30)
+                  )
+                ),
+              ),
+            )
+          ],
+        ),
       )
     );
   }

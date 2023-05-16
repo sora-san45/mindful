@@ -62,19 +62,27 @@ class _SignUpState extends State<SignUp> {
               if (p1.text == p2.text) {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => HomePage()));
-              } 
-              else {
-                AlertDialog(title:Text("Passwords don't Match"));
+              } else {
+                showDialog(context: context, builder: (context) => Alert());
               }
             },
             child: Text("SIGN IN"),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.teal[300],
-              shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
-            ),
+                backgroundColor: Colors.teal[300],
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20))),
           ),
         ],
       ),
     ));
+  }
+}
+
+class Alert extends StatelessWidget {
+  const Alert({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(title: Text("Passwords don't match"));
   }
 }

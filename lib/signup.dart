@@ -59,11 +59,12 @@ class _SignUpState extends State<SignUp> {
           SizedBox(height: 10),
           ElevatedButton(
             onPressed: () {
-              if (p1 == p2) {
+              if (p1.text == p2.text) {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => HomePage()));
-              } else {
-                AlertDialog();
+              } 
+              else {
+                AlertDialog(title:Text("Passwords don't Match"));
               }
             },
             child: Text("SIGN IN"),

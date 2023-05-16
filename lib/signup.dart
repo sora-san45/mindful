@@ -41,6 +41,17 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(left:16.0,right:16.0,top:10.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: "confirm password",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30)
+                  )
+                ),
+              ),
+            ),
             
           ],
         ),

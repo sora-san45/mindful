@@ -11,8 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List<String> il = <String>['1', '2', '3', '4', '5'];
-  bool moodTap=false;
+  final List<String> mood = <String>["lib/icons/crying.png","lib/icons/sad.png","lib/icons/neutral.png","lib/icons/smile.png","lib/icons/happy.png"];
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,29 +78,46 @@ class _HomePageState extends State<HomePage> {
                       height:60,
                         child: ListView.builder(
                             scrollDirection: Axis.horizontal,
-                            itemCount: il.length,
+                            itemCount: mood.length,
                             itemBuilder: (BuildContext context, index) {
                               return Padding(
                                 padding: const EdgeInsets.only(left:16),
-                                child: InkWell(
+                                child: GestureDetector(
+                                  
                                   onTap: (){
-                                    moodTap=true;
                                   },
-                                  child:Container(
-                                    height:60,
-                                    width:60,
-                                    child:Text('${il[index]}'),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      boxShadow: [
-                                         BoxShadow(
-                                           color: Color.fromARGB(255, 164, 159, 159),
-                                            spreadRadius: 1,
-                                           blurRadius: 15)
-                                      ],
-                                      border: moodTap?Border.all(color:Colors.black87):Border.all(color: Colors.transparent),
-                                      borderRadius: BorderRadius.circular(10)
+                                  child:Stack(children:[
+                                     Container(
+                                      height:60,
+                                      width:60,
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        boxShadow: [
+                                           BoxShadow(
+                                             color: Color.fromARGB(255, 187, 178, 178),
+                                              spreadRadius: 1,
+                                             blurRadius: 15)
+                                        ],
+                                        borderRadius: BorderRadius.circular(10)
+                                      ),
                                     ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left:14),
+                                      child: Center(
+                                        child: Container(
+                                          height:30,
+                                          width:30,
+                                          decoration: BoxDecoration(
+                                            image:DecorationImage(
+                                              image:AssetImage(mood[index]),
+                                              fit:BoxFit.fill
+                                            ),
+                                            shape:BoxShape.circle
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                    ]
                                   ),
                                 ),
                               );

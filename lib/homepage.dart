@@ -31,13 +31,18 @@ class _HomePageState extends State<HomePage> {
                       fit: BoxFit.cover)),
             ),
           ),
-          Positioned(
-              top: 30,
-              left: 30,
-              child: IconButton(
-                  onPressed: () {
-                  },
-                  icon: Icon(Icons.menu))),
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Positioned(
+              child: Container(
+                child:Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                  IconButton(onPressed: (){}, icon: Icon(Icons.menu)),
+                  IconButton(onPressed:(){},icon:Icon(Icons.notifications))
+                ],)
+            )),
+          ),
           Positioned(
               top: 140,
               child: Container(

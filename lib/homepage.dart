@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                 height: 800,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 252, 205, 162),
                     boxShadow: [
                       BoxShadow(
                           color: Colors.grey.shade600,
@@ -64,16 +64,16 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 30, top: 30),
+                      padding: const EdgeInsets.only(left: 23, top: 30),
                       child: Align(
                           alignment: Alignment.topLeft,
                           child: Text(
-                            "Your Mood Today",
+                            "Your Mood",
                             style: TextStyle(
                                 fontSize: 23, fontWeight: FontWeight.w600),
                           )),
                     ),
-                    SizedBox(height: 25),
+                    SizedBox(height: 15),
                     Container(
                       height:60,
                         child: ListView.builder(
@@ -81,9 +81,8 @@ class _HomePageState extends State<HomePage> {
                             itemCount: mood.length,
                             itemBuilder: (BuildContext context, index) {
                               return Padding(
-                                padding: const EdgeInsets.only(left:16),
-                                child: GestureDetector(
-                                  
+                                padding: const EdgeInsets.only(left:15),
+                                child: InkWell(                                 
                                   onTap: (){
                                   },
                                   child:Stack(children:[
@@ -91,14 +90,14 @@ class _HomePageState extends State<HomePage> {
                                       height:60,
                                       width:60,
                                       decoration: BoxDecoration(
-                                        color: Colors.white,
+                                        color: Color.fromARGB(255, 255, 230, 193),
                                         boxShadow: [
                                            BoxShadow(
-                                             color: Color.fromARGB(255, 187, 178, 178),
+                                             color: Color.fromARGB(255, 252, 192, 153),
                                               spreadRadius: 1,
                                              blurRadius: 15)
                                         ],
-                                        borderRadius: BorderRadius.circular(10)
+                                        borderRadius: BorderRadius.circular(25)
                                       ),
                                     ),
                                     Padding(

@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                 height: 800,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 252, 205, 162),
+                    color: Color.fromARGB(255, 255, 255, 255),
                     boxShadow: [
                       BoxShadow(
                           color: Colors.grey.shade600,
@@ -90,10 +90,10 @@ class _HomePageState extends State<HomePage> {
                                       height:60,
                                       width:60,
                                       decoration: BoxDecoration(
-                                        color: Color.fromARGB(255, 255, 230, 193),
+                                        color: Colors.white,
                                         boxShadow: [
                                            BoxShadow(
-                                             color: Color.fromARGB(255, 252, 192, 153),
+                                             color: Color.fromARGB(255, 187, 178, 178),
                                               spreadRadius: 1,
                                              blurRadius: 15)
                                         ],
